@@ -1,6 +1,4 @@
-# r_intro_lecture_day_1
-R intro Day 1 lecture
+# r_intro_lecture_day_1_live
+R intro Day 1 lecture - live session
 
-this lecture cover the different operator apply in r-programming 
-
-ref: https://www.geeksforgeeks.org/r-operators/
+this lecture cover basic commands using for calculation of summary statistics 
