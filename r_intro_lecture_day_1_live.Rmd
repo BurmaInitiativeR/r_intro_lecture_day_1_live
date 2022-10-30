@@ -69,7 +69,7 @@ df <- read.csv("wnba.csv")
 # excel file 
 library("readxl")
 
-df_2 <- read_excel("wnba.xlsx", sheet = "wnba")
+df_2 <- read_excel("wnba.xlsx", sheet = "wnba") # want to learn more!
 
 ```
 
@@ -80,5 +80,49 @@ df_2 <- read_excel("wnba.xlsx", sheet = "wnba")
 In a Science test, each correct answer was awarded 5 marks and 2 marks were deducted for each incorrect answer. If there were 20 questions in the test and Danny obtained 79 marks, how many questions did he answer correctly? 
 
 
+Let assume;
 
++ T as total questions(or answers) 
++ C as total correct answer 
++ IC as total incorrect answer 
++ DM as Danny's total mark
++ PT as possible total marks (when all answers are correct)
++ AWD as award scale 
++ DED as deduction scale 
+
+We can write above problem in to the following mathematics equations. 
+
++ $$T = C + IC$$ 
++ $$C = T - IC$$
++ $$IC = T - C$$
++ $$PT = AWD \times T$$
++ $$DM = (AWD \times C) + (DED \times IC)$$
++ $$DM = (AWD \times C + (DED \times (T - C))$$
++ $$DM = (AWD \times C) + (DEC \times C) - (DEC \times T)$$
++ $$DM = C(AWD + DEC) - (DEC \times T)$$
++ $$C = \frac{DM + (DEC \times T)}{(AWD + DEC)}$$
+
+
+```{r}
+
+awd <- 5
+ded <- -2
+t <- 20
+dm <- 79
+
+c <- (dm + (-2 * t))/(awd + ded)
+c
+
+```
+
+
+
+
+Compare with below method and any comment?
+
+```{r echo=FALSE, out.width = "80%", fig.align = "center"}
+
+knitr::include_graphics("solution.jpeg")
+
+```
 
