@@ -98,9 +98,9 @@ We can write above problem in to the following mathematics equations.
 + $$PT = AWD \times T$$
 + $$DM = (AWD \times C) + (DED \times IC)$$
 + $$DM = (AWD \times C + (DED \times (T - C))$$
-+ $$DM = (AWD \times C) + (DEC \times C) - (DEC \times T)$$
-+ $$DM = C(AWD + DEC) - (DEC \times T)$$
-+ $$C = \frac{DM + (DEC \times T)}{(AWD + DEC)}$$
++ $$DM = (AWD \times C) + (DED \times T) - (DED \times C)$$
++ $$DM = C(AWD - DED) + (DED \times T)$$
++ $$C = \frac{DM - (DED \times T)}{(AWD - DED)}$$
 
 
 ```{r}
@@ -110,7 +110,7 @@ ded <- -2
 t <- 20
 dm <- 79
 
-c <- (dm + (-2 * t))/(awd + ded)
+c <- (dm - (ded * t))/(awd - ded)
 c
 
 ```
