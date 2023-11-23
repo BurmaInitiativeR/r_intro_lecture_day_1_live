@@ -71,7 +71,8 @@ df <- read.csv("wnba.csv")
 # excel file 
 library("readxl")
 
-df_2 <- read_excel("wnba.xlsx", sheet = "wnba") # want to learn more!
+df_2 <- read_excel("wnba.xlsx") 
+df_3 <- read_excel("wnba.xlsx", sheet = "wnba") # want to learn more!
 
 ```
 
